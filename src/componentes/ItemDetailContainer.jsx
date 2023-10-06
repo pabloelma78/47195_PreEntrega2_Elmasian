@@ -1,22 +1,16 @@
 import React from 'react';
 import ItemDetail from './ItemDetail';
+import useFetch from './useFetch';
 
-const ItemDetailContainer = () => {
-    const [item, setItem] = useState({})
-    const getData = () => {
-        fetch("https://fakestoreapi.com/products/2")
-          .then(response => response.json())
-          .then(data => setItems(data))
-          .catch(error => console.log(error))
-      }
-      useEffect(() => {
-        getData()
-      },[])
+const ItemDetailContainer = ({id}) => {
+    const [item] = useFetch(`https://fakestoreapi.com/products/${id}`)
     return (
-        <>
-            <ItemDetail item={item}/>
+        <>{
+          item !== null &&
+          <ItemDetail item={item}/>
+        }            
         </>
     );
-};
+}
 
 export default ItemDetailContainer;

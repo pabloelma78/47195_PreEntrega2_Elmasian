@@ -1,40 +1,25 @@
 import React from 'react';
 import CartWidget from './CartWidget';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <CartWidget/>
-</nav>
+    <Navbar bg="success" data-bs-theme="dark">
+      <Container>
+        <Navbar.Brand href="/">Comercio</Navbar.Brand>
+        <Nav className="me-auto">
+          <Link style={{textDecoration: "none", marginRight: "10px"}} to="/">Home</Link>
+          <Link style={{textDecoration: "none", marginRight: "10px"}} to="/about">About</Link>
+          <Link style={{textDecoration: "none", marginRight: "10px"}} to="/contact">Contact</Link>
+          <Link style={{textDecoration: "none", marginRight: "10px"}} to="/category">Men´s clothing</Link>
+        </Nav>
+        
+      </Container>
+      <CartWidget/>
+    </Navbar>
 )}
 
 export default NavBar;

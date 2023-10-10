@@ -14,7 +14,9 @@ const NavBar = () => {
           <Link style={{textDecoration: "none", marginRight: "10px"}} to="/">Home</Link>
           <Link style={{textDecoration: "none", marginRight: "10px"}} to="/about">About</Link>
           <Link style={{textDecoration: "none", marginRight: "10px"}} to="/contact">Contact</Link>
-          <Link style={{textDecoration: "none", marginRight: "10px"}} to="/category">Men´s clothing</Link>
+          <Link style={{textDecoration: "none", marginRight: "10px"}} to="/category/jewelery">Jewelery</Link>
+          <Link style={{textDecoration: "none", marginRight: "10px"}} to="/category/electronics">Electronics</Link>
+          <Link style={{textDecoration: "none", marginRight: "10px"}} to="/category/men's clothing">Men's clothing</Link>
         </Nav>
         
       </Container>

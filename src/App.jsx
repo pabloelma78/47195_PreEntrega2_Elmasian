@@ -7,11 +7,10 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Detalle from './componentes/Detalle'
-import Category from './componentes/Category'
 const App =() => {
   return (
         <>
-
+        
         <h1>2da preEntrega Elmasian</h1>
         <NavBar/>
         <Routes>
@@ -19,7 +18,8 @@ const App =() => {
           <Route path='/about' element={<About />}/>
           <Route path='/contact' element={<Contact />}/>
           <Route path='/detalle/:id' element={<Detalle />}/>
-          <Route path='/category' element={<Category />}/>
+          <Route path='/category/:category' element={<ItemListContainer/>}/>
+          
           
         </Routes>     
         
